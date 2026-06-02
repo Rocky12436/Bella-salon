@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://rocky12436.github.io/Bella-salon/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

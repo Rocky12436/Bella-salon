@@ -25,7 +25,7 @@ function TopNav() {
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <TopNav />
       <Routes>
         <Route path="/" element={<Home />} />

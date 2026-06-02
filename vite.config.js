@@ -5,7 +5,16 @@ export default defineConfig({
   plugins: [react()],
   base: '/Bella-salon/',
   build: {
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
+      onwarn(warning, warn) {
+        // Suppress known harmless warnings
+        if (warning.code === 'THIS_IS_UNDEFINED' || 
+            (warning.message && warning.message.includes('import-analysis'))) {
+          return;
+        }
+        warn(warning);
+      },
       plugins: [
         {
           name: 'suppress-dynamic-import-warning',

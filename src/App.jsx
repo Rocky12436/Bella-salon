@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import UserBooking from './pages/UserBooking';
 import AdminDashboard from './pages/AdminDashboard';
@@ -25,7 +25,7 @@ function TopNav() {
 
 function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
       <TopNav />
       <Routes>
         <Route path="/" element={<Home />} />
